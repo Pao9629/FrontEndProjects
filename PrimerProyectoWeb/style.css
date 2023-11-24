@@ -11,23 +11,30 @@
 
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
 }
+
+*. *::before, *::after {
+    box-sizing: inherit;
+}
+
 body{
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to top, #afe1f4 0%, var(--blanco 100%));
 }
 
-hi {
-    font-size: 3.8rem;
+.contenedor {
+    max-width: 120rem;
+    margin:0 auto;
+    .color: var(--primario);
 }
 
-h2 {
-    font-size: 3.8rem;
+
+
+h1, h2, h3 {
+    text-align: center;
 }   
-
-h3 {
-    font-size: 3.8rem;
-}
 
 .titulo{
     text-align: center;
@@ -48,11 +55,7 @@ h1.titulo span {
     color:var(--primario);
 }
 
-.contenedor {
-    max-width: 120rem;
-    margin:0 auto;
-    .color: var(--primario);
-}
+
 .nav-bg {
     background-color: var(--secundario);
 }
@@ -97,25 +100,38 @@ html {
 }
 
 .hero {
-    background-image: url(Suplementos.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 450px;
-    padding: 20px;
-    position: relative;
-}
+    background: linear-gradient(to right, rgba(255,255,255,0.8), rgba(255,255,255,0.1)),
+                    url(Suplementos.jpeg);
+        background-size: cover;
+        background-color: #212121 (0,0,0,.5);
+      }
+      
 .contenido-hero {
-    position: absolute;
-    background-color:rgba(0,0,0,.3);
-    background-color: rgb(0, 0, 0 / 30%);
-    width: 100%;
-    height: 100%;
+    position: relative;
+    background-color:rgba(0,0,0,.5);
+    background-color: rgb(0, 0, 0 / 50%);
+    background-size: cover;
     color: var(--blanco);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
+}
+
+.texto-valencia {
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.lugar {
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 .contenido-hero h2 {
@@ -129,8 +145,34 @@ html {
 }
 
 .iconos-hero {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+
+
+@media (min-width: 768px) {
+    .contenido-hero h2 {
+        font-size: 4rem;
+    }
+    .boton1 {
+        font-size: 2.5rem;
+    }
+}
+
+.boton1 {
+    position: relative;
+    color: var(--blanco);
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secundario);
+    border: oldlace;
+    border-radius: 6rem;
+    text-decoration: none;
     text-align: center;
+    padding: 1rem 4rem;
+    
 }
