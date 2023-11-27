@@ -12,9 +12,10 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
+    scroll-snap-type: y mandatory;
 }
 
-*. *::before, *::after {
+* *::before, *::after {
     box-sizing: inherit;
 }
 
@@ -27,7 +28,7 @@ body{
 .contenedor {
     max-width: 120rem;
     margin:0 auto;
-    .color: var(--primario);
+    color: var(--primario);
 }
 
 
@@ -175,4 +176,93 @@ html {
     text-align: center;
     padding: 1rem 4rem;
     
+}
+
+@media (min-width: 768px) {
+      
+.servicios{
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    column-gap: 10px;
+}
+
+}
+.servicio {
+    scroll-snap-stop: always;
+    
+}
+.servicio {
+    display: flex ;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    font-size: 2rem;
+    color: var(--oscuro);
+    margin: 0;
+    font-weight: normal;
+    text-align: center;
+    
+}
+
+.servicio p {
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem,100%);
+    margin: 0% auto;
+    border-radius: 1rem;
+
+}
+
+.formulario fieldset {
+    border: none;;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+.contenedor-campos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.botoncito {
+    position: relative;
+    color: var(--blanco);
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--secundario);
+    border: oldlace;
+    border-radius: 6rem;
+    text-decoration: none;
+    text-align: center;
+    padding: 2rem 4rem;
+    display: flex;
 }
